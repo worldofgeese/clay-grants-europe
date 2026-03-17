@@ -365,6 +365,133 @@ export const funds: Fund[] = [
       "https://www.igbk.de/components/com_rsform/uploads/ausschreibung/692dadb015576-APPLICATION_HPM%20RESIDENCY%205.0%20exploring%20porcelain.pdf",
   },
   {
+    id: "craft-limoges-residency-2025-12-31",
+    name: "CRAFT Limoges – Research & Creation Residency 2026",
+    provider: "CRAFT – Center for Research on Fire and Earth Arts",
+    deadlineType: "fixed",
+    deadlineISO: "2025-12-31",
+    deadlineText: "31 Dec 2025",
+    location: "Limoges, France",
+    eligibility:
+      "Open to professional artists, designers, architects, ceramists, and collectives worldwide.",
+    tags: ["residency", "grant", "ceramics", "france", "europe"],
+    portalUrl: "https://www.craft-limoges.org/open-call-researche-creation-residency/",
+    infoUrl: "https://www.craft-limoges.org/open-call-researche-creation-residency/",
+  },
+  {
+    id: "sevres-biennale-ceramique-2025-11-30",
+    name: "10e Biennale de céramique (Sèvres)",
+    provider: "ArtCeram2 / City of Sèvres",
+    deadlineType: "fixed",
+    deadlineISO: "2025-11-30",
+    deadlineText: "30 Nov 2025",
+    location: "Sèvres, France",
+    eligibility: "International contemporary ceramic artists applying to exhibit.",
+    tags: ["exhibition", "ceramics", "france", "europe", "biennale"],
+    portalUrl: "https://www.artceram2.com/candidature-2026/",
+    infoUrl:
+      "https://www.sevres.fr/actualites/appel-a-candidatures-10e-biennale-de-ceramique/",
+  },
+  {
+    id: "unicum-2026-artistic-ceramics-2025-12-01",
+    name: "UNICUM 2026 – Artistic Ceramics Exhibition",
+    provider: "National Museum of Slovenia",
+    deadlineType: "fixed",
+    deadlineISO: "2025-12-01",
+    deadlineText: "1 Dec 2025",
+    location: "Ljubljana, Slovenia",
+    eligibility:
+      "International ceramic artists; works created within the last five years.",
+    tags: ["exhibition", "competition", "ceramics", "slovenia", "europe"],
+    portalUrl:
+      "https://www.nms.si/en/events/12107-Call-for-applications-to-participate-in-the-exhibition-of-artistic-ceramics-UNICUM-2026",
+    infoUrl:
+      "https://www.nms.si/en/events/12107-Call-for-applications-to-participate-in-the-exhibition-of-artistic-ceramics-UNICUM-2026",
+  },
+  {
+    id: "unicum-2026-functional-ceramics-2026-01-15",
+    name: "UNICUM 2026 – Ceramic Form and Function: Beyond Use",
+    provider: "Center Rog (UNICUM 2026)",
+    deadlineType: "fixed",
+    deadlineISO: "2026-01-15",
+    deadlineText: "15 Jan 2026 (extended)",
+    location: "Ljubljana, Slovenia",
+    eligibility:
+      "International ceramic artists/designers applying with functional or design ceramics.",
+    tags: ["exhibition", "ceramics", "design", "slovenia", "europe"],
+    portalUrl: "https://form.jotform.com/252923271638360",
+    infoUrl:
+      "https://center-rog.si/novice/razpis-za-razstave-za-vi-mednarodni-trienale-keramike-unicum-2026/",
+  },
+  {
+    id: "ceramic-art-andenne-2026-12-08",
+    name: "Ceramic Art Andenne – Ceramics Market 2026",
+    provider: "Centre Culturel d’Andenne / EMA",
+    deadlineType: "fixed",
+    deadlineISO: "2025-12-08",
+    deadlineText: "8 Dec 2025",
+    location: "Andenne, Belgium",
+    eligibility: "Ceramic artists applying to the market exhibition.",
+    tags: ["market", "exhibition", "ceramics", "belgium", "europe"],
+    portalUrl: "https://www.ceramicartandenne.be/",
+    infoUrl:
+      "https://www.europeanrouteofceramics.eu/ceramic-art-andenne-2026-call-for-application/",
+  },
+  {
+    id: "keramiktage-oldenburg-2026-01-11",
+    name: "International Ceramics Days Oldenburg – Market Applications",
+    provider: "Werkschule e.V.",
+    deadlineType: "fixed",
+    deadlineISO: "2026-01-11",
+    deadlineText: "11 Jan 2026",
+    location: "Oldenburg, Germany",
+    eligibility: "Professional ceramic artists/workshops applying to exhibit.",
+    tags: ["market", "exhibition", "ceramics", "germany", "europe"],
+    portalUrl: "https://www.keramiktage.com/bewerben-keramiktage-oldenburg",
+    infoUrl: "https://www.keramiktage.com/bewerben-keramiktage-oldenburg",
+  },
+  {
+    id: "carouge-ceramics-competition-2025-12-31",
+    name: "Carouge International Ceramics Competition 2026",
+    provider: "City of Carouge (Geneva)",
+    deadlineType: "fixed",
+    deadlineISO: "2025-12-31T23:59:00+01:00",
+    deadlineText: "31 Dec 2025, 23:59 (local)",
+    location: "Carouge (Geneva), Switzerland",
+    eligibility: "Ceramic artists aged 16+; works primarily ceramic.",
+    tags: ["competition", "ceramics", "switzerland", "europe"],
+    portalUrl: "https://www.carouge.ch/cic",
+    infoUrl:
+      "https://www.carouge.ch/sites/default/files/2025-12/musee-carouge-concours_international_de_ceramique_reglement_vf.pdf",
+  },
+  {
+    id: "bck-2026-01-10",
+    name: "Biennale of Contemporary Keramics 2026 (BCK)",
+    provider: "Big Blue Dot",
+    deadlineType: "fixed",
+    deadlineISO: "2026-01-10T23:59:00+00:00",
+    deadlineText: "10 Jan 2026 (midnight GMT)",
+    location: "Rhodes, Greece",
+    eligibility:
+      "Artists with a Mediterranean connection; clay must be the primary material.",
+    tags: ["biennale", "exhibition", "ceramics", "greece", "europe", "mediterranean"],
+    portalUrl: "https://bigbluedot.art/",
+    infoUrl: "https://bigbluedot.art/",
+  },
+  {
+    id: "cica-alcora-2026-11-30",
+    name: "CICA – Concurs Internacional de Ceràmica de l'Alcora",
+    provider: "Ajuntament de l'Alcora",
+    deadlineType: "fixed",
+    deadlineISO: "2025-11-30",
+    deadlineText: "30 Nov 2025",
+    location: "L'Alcora, Spain",
+    eligibility: "International contemporary ceramic artists (competition).",
+    tags: ["competition", "ceramics", "spain", "europe"],
+    portalUrl: "https://www.mundoarti.com/concursos/CTO4679/concurso-internacional-de-ceramica-de-l-alcora-cica-2026/",
+    infoUrl: "https://www.mundoarti.com/concursos/CTO4679/concurso-internacional-de-ceramica-de-l-alcora-cica-2026/",
+  },
+  {
     id: "creta-rome-residency-rolling",
     name: "C.R.E.T.A. Rome – Ceramic Residency",
     provider: "C.R.E.T.A. Rome",
@@ -380,21 +507,34 @@ export const funds: Fund[] = [
   {
     id: "argilla-italia-2026-call",
     name: "Argillà Italia 2026 – Call for Ceramists",
-    provider: "Argillà Italia",
-    deadlineType: "tba",
-    deadlineText: "Deadline listed in application form (TBA here)",
+    provider: "European Route of Ceramics / MIC Faenza",
+    deadlineType: "fixed",
+    deadlineISO: "2026-01-12",
+    deadlineText: "12 Jan 2026",
     location: "Faenza, Italy",
-    eligibility: "Ceramic artists applying for exhibition space.",
-    tags: ["exhibition", "ceramics", "europe"],
-    portalUrl: "https://argilla-italia.it/en/2026-2/call-for-ceramists/",
-    infoUrl: "https://argilla-italia.it/en/2026-2/call-for-ceramists/",
+    eligibility:
+      "Ceramic artists, designers, and artisans worldwide applying to exhibit.",
+    tags: ["exhibition", "market", "ceramics", "italy", "europe"],
+    portalUrl: "https://iscrizione.argilla-italia.it/en/",
+    infoUrl:
+      "https://www.europeanrouteofceramics.eu/argilla-italia-2026-call-for-entries/",
   },
 ];
 
-const rankDeadlineType = (fund: Fund) => {
+const getDeadlineTime = (fund: Fund) => {
+  if (!fund.deadlineISO) return Number.POSITIVE_INFINITY;
+  const parsed = Date.parse(fund.deadlineISO);
+  return Number.isNaN(parsed) ? Number.POSITIVE_INFINITY : parsed;
+};
+
+const rankDeadlineType = (fund: Fund, now: number) => {
+  if (fund.deadlineType === "fixed") {
+    const deadlineTime = getDeadlineTime(fund);
+    if (deadlineTime < now) return 4;
+    return 0;
+  }
+
   switch (fund.deadlineType) {
-    case "fixed":
-      return 0;
     case "relative":
       return 1;
     case "rolling":
@@ -407,14 +547,11 @@ const rankDeadlineType = (fund: Fund) => {
 };
 
 export const sortedFunds = [...funds].sort((a, b) => {
-  const rankDiff = rankDeadlineType(a) - rankDeadlineType(b);
+  const now = Date.now();
+  const rankDiff = rankDeadlineType(a, now) - rankDeadlineType(b, now);
   if (rankDiff !== 0) return rankDiff;
-  const aTime = a.deadlineISO
-    ? Date.parse(a.deadlineISO)
-    : Number.POSITIVE_INFINITY;
-  const bTime = b.deadlineISO
-    ? Date.parse(b.deadlineISO)
-    : Number.POSITIVE_INFINITY;
+  const aTime = getDeadlineTime(a);
+  const bTime = getDeadlineTime(b);
   if (aTime !== bTime) return aTime - bTime;
   return a.name.localeCompare(b.name);
 });

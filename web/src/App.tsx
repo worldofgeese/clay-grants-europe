@@ -160,12 +160,6 @@ function App() {
                 <span>{fund.location}</span>
                 <span>{fund.eligibility}</span>
               </div>
-              {fund.notes && <div className="fund-notes">{fund.notes}</div>}
-              <div className="fund-tags">
-                {fund.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
-              </div>
               <div className="fund-actions">
                 <a className="button ghost" href={fund.infoUrl} target="_blank" rel="noreferrer">
                   Details
