@@ -478,20 +478,6 @@ export const funds: Fund[] = [
       "https://www.carouge.ch/sites/default/files/2025-12/musee-carouge-concours_international_de_ceramique_reglement_vf.pdf",
   },
   {
-    id: "bck-2026-01-10",
-    name: "Biennale of Contemporary Keramics 2026 (BCK)",
-    provider: "Big Blue Dot",
-    deadlineType: "fixed",
-    deadlineISO: "2026-01-10T23:59:00+00:00",
-    deadlineText: "10 Jan 2026 (midnight GMT)",
-    location: "Rhodes, Greece",
-    eligibility:
-      "Artists with a Mediterranean connection; clay must be the primary material.",
-    tags: ["biennale", "exhibition", "ceramics", "greece", "europe", "mediterranean"],
-    portalUrl: "https://bigbluedot.art/",
-    infoUrl: "https://bigbluedot.art/",
-  },
-  {
     id: "cica-alcora-2026-11-30",
     name: "CICA – Concurs Internacional de Ceràmica de l'Alcora",
     provider: "Ajuntament de l'Alcora",
