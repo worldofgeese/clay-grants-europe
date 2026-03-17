@@ -182,7 +182,8 @@ export const funds: Fund[] = [
       "Individuals and organizations in architecture, craft, and design.",
     tags: ["grant", "craft/design", "ceramics", "denmark"],
     portalUrl: "https://nbjf.dk/ansoegning/",
-    infoUrl: "https://nbjf.dk/ansoegning/",
+    infoUrl:
+      "https://www.nationalbanken.dk/da/om-os/nationalbankens-jubilaeumsfond",
     notes: "Other 2026 deadlines: 7 Sep 2026 and 19 Jan 2026.",
   },
   {
