@@ -1,33 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
-
 :root {
-  --bg: #f6f2ea;
-  --panel: #fffaf3;
-  --surface: #f9f4ec;
-  --text: #1f1a16;
-  --muted: #6f6259;
-  --border: rgba(42, 32, 23, 0.12);
-  --chip: rgba(42, 32, 23, 0.06);
+  --bg: #f5f3ee;
+  --panel: #ffffff;
+  --surface: #ffffff;
+  --text: #1e1a16;
+  --muted: #63574f;
+  --border: rgba(30, 26, 22, 0.12);
+  --chip: rgba(30, 26, 22, 0.06);
   --accent: #0f8b8d;
-  --accent-2: #f7a935;
-  --accent-soft: rgba(15, 139, 141, 0.2);
-  --shadow: 0 30px 60px -40px rgba(22, 15, 8, 0.6);
-  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  --sans: "Space Grotesk", "Segoe UI", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
 
   font-family: var(--sans);
   color: var(--text);
   background: var(--bg);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, #ffe7d0, transparent 45%),
-    radial-gradient(circle at top right, #d7f7f0, transparent 40%),
-    var(--bg);
+  background: var(--bg);
 }
 
 #root {
@@ -48,7 +39,7 @@ h2 {
 }
 
 code {
-  background: rgba(15, 139, 141, 0.12);
+  background: var(--chip);
   padding: 2px 6px;
   border-radius: 6px;
   font-family: var(--mono);

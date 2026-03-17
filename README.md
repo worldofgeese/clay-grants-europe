@@ -3,6 +3,11 @@
 Telegram Mini App that lists Europe-wide funding and residency opportunities for
 ceramic artists based in Copenhagen, ranked by upcoming deadlines.
 
+## Architecture
+
+- `web/`: React UI built with Vite 8 via the Vite+ toolchain.
+- `server/`: Node/Express + Telegraf bot API that validates `initData` and serves `web/dist`.
+
 ## Prereqs
 
 - Node.js 20.19+ or 22.12+

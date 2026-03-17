@@ -47,7 +47,22 @@ export const funds: Fund[] = [
     tags: ["grant", "mobility", "nordic", "baltic", "ceramics"],
     portalUrl: "https://www.nkk.org/en/mobility-funding/",
     infoUrl: "https://www.nkk.org/en/mobility-funding/",
-    notes: "Next application period: 18 Aug–18 Sep 2026.",
+    notes: "Next application period: 18 Aug–18 Sep 2026, 15:59 (UTC+2).",
+  },
+  {
+    id: "ncp-culture-art-programme-2026-09-10",
+    name: "Culture and Art Programme",
+    provider: "Nordic Culture Point",
+    deadlineType: "fixed",
+    deadlineISO: "2026-09-10T15:59:00+02:00",
+    deadlineText: "10 Sep 2026, 15:59 (UTC+2)",
+    location: "Nordic + Baltic region",
+    eligibility:
+      "Projects with partners in at least three Nordic/Baltic countries; open to all art forms.",
+    tags: ["grant", "collaboration", "nordic", "baltic", "ceramics"],
+    portalUrl: "https://www.nkk.org/en/culture-and-art-programme/",
+    infoUrl: "https://www.nkk.org/en/culture-and-art-programme/",
+    notes: "First 2026 round: 2 Mar 2026, 15:59 (UTC+2).",
   },
   {
     id: "sk-craft-design-projects-2026-03-18",
@@ -112,6 +127,19 @@ export const funds: Fund[] = [
     notes: "Second annual deadline was 19 Dec 2025.",
   },
   {
+    id: "arroscia-residency-2026-04-07",
+    name: "Arroscia Residency",
+    provider: "HARP (Italy)",
+    deadlineType: "fixed",
+    deadlineISO: "2026-04-07T23:59:00+02:00",
+    deadlineText: "7 Apr 2026",
+    location: "Arroscia Valley, Italy",
+    eligibility: "International artists (all disciplines) with project proposals.",
+    tags: ["residency", "europe", "ceramics"],
+    portalUrl: "https://arrosciaresidency.org/application/",
+    infoUrl: "https://arrosciaresidency.org/application/",
+  },
+  {
     id: "kk-arrangementspulje-2026-05-01",
     name: "Arrangementspulje (public events in Copenhagen)",
     provider: "Københavns Kommune",
@@ -143,6 +171,21 @@ export const funds: Fund[] = [
     notes: "Deadlines four times yearly (Feb/May/Aug/Nov).",
   },
   {
+    id: "nationalbanken-jubilaeumsfond-2026-05-04",
+    name: "Nationalbankens Jubilæumsfond (craft/design/architecture)",
+    provider: "Nationalbankens Jubilæumsfond",
+    deadlineType: "fixed",
+    deadlineISO: "2026-05-04",
+    deadlineText: "4 May 2026",
+    location: "Denmark",
+    eligibility:
+      "Individuals and organizations in architecture, craft, and design.",
+    tags: ["grant", "craft/design", "ceramics", "denmark"],
+    portalUrl: "https://nbjf.dk/ansoegning/",
+    infoUrl: "https://nbjf.dk/ansoegning/",
+    notes: "Other 2026 deadlines: 7 Sep 2026 and 19 Jan 2026.",
+  },
+  {
     id: "guldagergaard-project-network-2026-06-01",
     name: "Project Network (6‑week talent residency)",
     provider: "Guldagergaard",
@@ -161,8 +204,8 @@ export const funds: Fund[] = [
     name: "Project Funding (Nordic Culture Fund)",
     provider: "Nordic Culture Fund",
     deadlineType: "fixed",
-    deadlineISO: "2026-09-04",
-    deadlineText: "4 Sep 2026",
+    deadlineISO: "2026-09-04T23:59:00+02:00",
+    deadlineText: "4 Sep 2026, 23:59 (CET)",
     location: "Nordic region",
     eligibility:
       "Artists/organisations (incl. outside Nordics) with a Nordic collaboration and co-financing.",
@@ -170,6 +213,7 @@ export const funds: Fund[] = [
     portalUrl: "https://mypage.nordiskkulturfond.org",
     infoUrl:
       "https://nordiskkulturfond.org/en/funding-programmes/project-funding-for-collaborations-across-the-nordic-region",
+    notes: "Earlier 2026 deadline: 13 Feb 2026, 23:59 (CET).",
   },
   {
     id: "sk-huskunstner-2026-10-01",
@@ -320,4 +364,64 @@ export const funds: Fund[] = [
     infoUrl:
       "https://www.igbk.de/components/com_rsform/uploads/ausschreibung/692dadb015576-APPLICATION_HPM%20RESIDENCY%205.0%20exploring%20porcelain.pdf",
   },
+  {
+    id: "creta-rome-residency-rolling",
+    name: "C.R.E.T.A. Rome – Ceramic Residency",
+    provider: "C.R.E.T.A. Rome",
+    deadlineType: "rolling",
+    deadlineText: "Rolling (limited 2026 spots; 2027 deadline 1 Sep 2026)",
+    location: "Rome, Italy",
+    eligibility:
+      "Ceramic artists and designers; applications accepted for upcoming sessions.",
+    tags: ["residency", "ceramics", "europe"],
+    portalUrl: "https://www.cretarome.com/application",
+    infoUrl: "https://www.cretarome.com/schedule",
+  },
+  {
+    id: "argilla-italia-2026-call",
+    name: "Argillà Italia 2026 – Call for Ceramists",
+    provider: "Argillà Italia",
+    deadlineType: "tba",
+    deadlineText: "Deadline listed in application form (TBA here)",
+    location: "Faenza, Italy",
+    eligibility: "Ceramic artists applying for exhibition space.",
+    tags: ["exhibition", "ceramics", "europe"],
+    portalUrl: "https://argilla-italia.it/en/2026-2/call-for-ceramists/",
+    infoUrl: "https://argilla-italia.it/en/2026-2/call-for-ceramists/",
+  },
 ];
+
+const rankDeadlineType = (fund: Fund) => {
+  switch (fund.deadlineType) {
+    case "fixed":
+      return 0;
+    case "relative":
+      return 1;
+    case "rolling":
+      return 2;
+    case "tba":
+      return 3;
+    default:
+      return 4;
+  }
+};
+
+export const sortedFunds = [...funds].sort((a, b) => {
+  const rankDiff = rankDeadlineType(a) - rankDeadlineType(b);
+  if (rankDiff !== 0) return rankDiff;
+  const aTime = a.deadlineISO
+    ? Date.parse(a.deadlineISO)
+    : Number.POSITIVE_INFINITY;
+  const bTime = b.deadlineISO
+    ? Date.parse(b.deadlineISO)
+    : Number.POSITIVE_INFINITY;
+  if (aTime !== bTime) return aTime - bTime;
+  return a.name.localeCompare(b.name);
+});
+
+export const fundStats = {
+  total: funds.length,
+  rollingCount: funds.filter((fund) => fund.deadlineType === "rolling").length,
+  relativeCount: funds.filter((fund) => fund.deadlineType === "relative").length,
+  tbaCount: funds.filter((fund) => fund.deadlineType === "tba").length,
+};

@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-import { funds, fundsLastUpdated, type Fund } from "./data/funds";
+import { fundStats, fundsLastUpdated, sortedFunds } from "./data/funds";
 
 type TelegramWebApp = {
   isExpanded?: boolean;
@@ -19,61 +19,22 @@ declare global {
 function App() {
   const [connected, setConnected] = useState(false);
 
-  const sortedFunds = useMemo(() => {
-    const rank = (fund: Fund) => {
-      switch (fund.deadlineType) {
-        case "fixed":
-          return 0;
-        case "relative":
-          return 1;
-        case "rolling":
-          return 2;
-        case "tba":
-          return 3;
-        default:
-          return 4;
-      }
-    };
-    return [...funds].sort((a, b) => {
-      const rankDiff = rank(a) - rank(b);
-      if (rankDiff !== 0) return rankDiff;
-      const aTime = a.deadlineISO
-        ? Date.parse(a.deadlineISO)
-        : Number.POSITIVE_INFINITY;
-      const bTime = b.deadlineISO
-        ? Date.parse(b.deadlineISO)
-        : Number.POSITIVE_INFINITY;
-      if (aTime !== bTime) return aTime - bTime;
-      return a.name.localeCompare(b.name);
-    });
-  }, []);
-
-  const summary = useMemo(() => {
-    const now = Date.now();
-    const nextFixed = sortedFunds.find(
-      (fund) =>
-        fund.deadlineType === "fixed" &&
-        fund.deadlineISO &&
-        Date.parse(fund.deadlineISO) >= now
-    );
-    const rollingCount = funds.filter(
-      (fund) => fund.deadlineType === "rolling"
-    ).length;
-    const relativeCount = funds.filter(
-      (fund) => fund.deadlineType === "relative"
-    ).length;
-    const tbaCount = funds.filter((fund) => fund.deadlineType === "tba").length;
-
-    return {
-      total: funds.length,
-      nextDeadline: nextFixed
-        ? `${nextFixed.deadlineText} • ${nextFixed.name}`
-        : "No upcoming fixed deadlines",
-      rollingCount,
-      relativeCount,
-      tbaCount,
-    };
-  }, [sortedFunds]);
+  const now = Date.now();
+  const nextFixed = sortedFunds.find(
+    (fund) =>
+      fund.deadlineType === "fixed" &&
+      fund.deadlineISO &&
+      Date.parse(fund.deadlineISO) >= now
+  );
+  const summary = {
+    total: fundStats.total,
+    nextDeadline: nextFixed
+      ? `${nextFixed.deadlineText} • ${nextFixed.name}`
+      : "No upcoming fixed deadlines",
+    rollingCount: fundStats.rollingCount,
+    relativeCount: fundStats.relativeCount,
+    tbaCount: fundStats.tbaCount,
+  };
 
   useEffect(() => {
     let attempts = 0;
@@ -150,7 +111,7 @@ function App() {
             <span>Total opportunities</span>
             <strong>{summary.total}</strong>
           </div>
-          <div className="status-row">
+          <div className="status-row status-row--stack">
             <span>Next deadline</span>
             <strong>{summary.nextDeadline}</strong>
           </div>
@@ -162,8 +123,8 @@ function App() {
             </strong>
           </div>
           <div className="status-row">
-            <span>Mode</span>
-            <strong>{connected ? "Telegram Mini App" : "Browser Preview"}</strong>
+            <span>Status</span>
+            <strong>{connected ? "Connected" : "Browser Preview"}</strong>
           </div>
         </div>
       </header>
