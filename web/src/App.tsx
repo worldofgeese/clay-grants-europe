@@ -145,7 +145,16 @@ function App() {
         </div>
         <div className="funds">
           {sortedFunds.map((fund) => (
-            <article className="fund-card" key={fund.id}>
+            <article
+              className={`fund-card${
+                fund.deadlineType === "fixed" &&
+                fund.deadlineISO &&
+                Date.parse(fund.deadlineISO) < now
+                  ? " fund-card--past"
+                  : ""
+              }`}
+              key={fund.id}
+            >
               <div className="fund-title">
                 <div>
                   <h3>{fund.name}</h3>
@@ -154,6 +163,11 @@ function App() {
                 <div className="deadline">
                   <span className="deadline-label">Deadline</span>
                   <strong>{fund.deadlineText}</strong>
+                  {fund.deadlineType === "fixed" &&
+                    fund.deadlineISO &&
+                    Date.parse(fund.deadlineISO) < now && (
+                      <span className="deadline-status">Past deadline</span>
+                    )}
                 </div>
               </div>
               <div className="fund-meta">
