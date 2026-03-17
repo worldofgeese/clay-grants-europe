@@ -22,9 +22,8 @@ export const funds: Fund[] = [
     id: "culture-moves-europe-individual-mobility-2026-03-31",
     name: "Culture Moves Europe – Individual Mobility",
     provider: "European Commission / Goethe-Institut",
-    deadlineType: "fixed",
-    deadlineISO: "2026-03-31",
-    deadlineText: "31 Mar 2026 (monthly rolling deadline)",
+    deadlineType: "rolling",
+    deadlineText: "Rolling calls (check portal for current deadlines)",
     location: "Europe-wide (Creative Europe countries)",
     eligibility:
       "Artists and cultural professionals legally resident in Creative Europe countries with a partner in another Creative Europe country.",
@@ -32,7 +31,7 @@ export const funds: Fund[] = [
     portalUrl: "https://gap-online.goethe.de",
     infoUrl:
       "https://culture.ec.europa.eu/calls/call-for-individual-mobility-of-artists-and-cultural-professionals",
-    notes: "Rolling monthly deadlines through 30 Apr 2026.",
+    notes: "Deadlines vary by rolling call period.",
   },
   {
     id: "nordic-culture-point-mobility-2026-03-31",
