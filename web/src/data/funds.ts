@@ -19,36 +19,6 @@ export const fundsLastUpdated = "2026-03-17";
 
 export const funds: Fund[] = [
   {
-    id: "culture-moves-europe-individual-mobility-2026-03-31",
-    name: "Culture Moves Europe – Individual Mobility",
-    provider: "European Commission / Goethe-Institut",
-    deadlineType: "rolling",
-    deadlineText: "Rolling calls (check portal for current deadlines)",
-    location: "Europe-wide (Creative Europe countries)",
-    eligibility:
-      "Artists and cultural professionals legally resident in Creative Europe countries with a partner in another Creative Europe country.",
-    tags: ["grant", "mobility", "europe-wide", "ceramics", "visual-arts"],
-    portalUrl: "https://gap-online.goethe.de",
-    infoUrl:
-      "https://culture.ec.europa.eu/calls/call-for-individual-mobility-of-artists-and-cultural-professionals",
-    notes: "Deadlines vary by rolling call period.",
-  },
-  {
-    id: "nordic-culture-point-mobility-2026-03-31",
-    name: "Mobility Funding (Nordic-Baltic Mobility Programme for Culture)",
-    provider: "Nordic Culture Point",
-    deadlineType: "fixed",
-    deadlineISO: "2026-03-31T15:59:00+02:00",
-    deadlineText: "31 Mar 2026, 15:59 (UTC+2)",
-    location: "Nordic + Baltic region",
-    eligibility:
-      "Individual professional artists/cultural practitioners resident in the Nordic or Baltic countries.",
-    tags: ["grant", "mobility", "nordic", "baltic", "ceramics"],
-    portalUrl: "https://www.nkk.org/en/mobility-funding/",
-    infoUrl: "https://www.nkk.org/en/mobility-funding/",
-    notes: "Next application period: 18 Aug–18 Sep 2026, 15:59 (UTC+2).",
-  },
-  {
     id: "ncp-culture-art-programme-2026-09-10",
     name: "Culture and Art Programme",
     provider: "Nordic Culture Point",
@@ -62,22 +32,6 @@ export const funds: Fund[] = [
     portalUrl: "https://www.nkk.org/en/culture-and-art-programme/",
     infoUrl: "https://www.nkk.org/en/culture-and-art-programme/",
     notes: "First 2026 round: 2 Mar 2026, 15:59 (UTC+2).",
-  },
-  {
-    id: "sk-craft-design-projects-2026-03-18",
-    name: "Kunsthåndværk- og designprojekter i Danmark og udlandet",
-    provider: "Statens Kunstfond",
-    deadlineType: "fixed",
-    deadlineISO: "2026-03-18T14:00:00+01:00",
-    deadlineText: "18 Mar 2026, 14:00",
-    location: "Denmark + international",
-    eligibility:
-      "Projects advancing Danish craft/design in Denmark or abroad; includes residencies and exchanges.",
-    tags: ["grant", "project", "craft/design", "ceramics"],
-    portalUrl: "https://portal.slks.dk",
-    infoUrl:
-      "https://www.kunst.dk/for-ansoegere/soeg-tilskud/kunsthaandvaerk-og-designprojekter-i-danmark-og-udlandet",
-    notes: "Second 2026 deadline: 9 Sep 2026, 14:00.",
   },
   {
     id: "sk-vaerkproduktion-2026-03-26",
@@ -94,22 +48,6 @@ export const funds: Fund[] = [
     infoUrl:
       "https://www.kunst.dk/for-ansoegere/soeg-tilskud/vaerkproduktion-og-udstillinger",
     notes: "Second 2026 deadline: 24 Sep 2026, 14:00.",
-  },
-  {
-    id: "kk-arrangementspulje-2026-05-01",
-    name: "Arrangementspulje (public events in Copenhagen)",
-    provider: "Københavns Kommune",
-    deadlineType: "fixed",
-    deadlineISO: "2026-05-01",
-    deadlineText: "1 May 2026",
-    location: "Copenhagen",
-    eligibility: "Organisers of publicly accessible events in Copenhagen.",
-    tags: ["event", "logistics", "exhibition", "ceramics", "copenhagen"],
-    portalUrl:
-      "https://www.kk.dk/brug-byen/kultur-og-projektstoette/arrangementspulje",
-    infoUrl:
-      "https://www.kk.dk/brug-byen/kultur-og-projektstoette/arrangementspulje",
-    notes: "Covers practical expenses for events in Copenhagen.",
   },
   {
     id: "kk-arrangementspulje-2026-05-01",
