@@ -96,7 +96,7 @@ function App() {
       <header className="hero">
         <div>
           <p className="eyebrow">Clay Grants Europe</p>
-          <h1>Funding and Residencies for Ceramic Artists</h1>
+          <h1>Funding for Ceramic Artists</h1>
           <p className="subtitle">
             Europe-wide opportunities that Copenhagen-based ceramicists can
             apply for, ranked by upcoming deadlines.
@@ -135,8 +135,8 @@ function App() {
             <h2>European Arts Funds for Ceramic Artists</h2>
             <p>
               Ranked by upcoming deadline. Includes EU-wide programs, Nordic/Baltic
-              funding, Denmark, and Europe-based ceramic residencies open to
-              Copenhagen-based artists.
+              funding, Denmark, and Europe-based exhibitions, markets, and
+              competitions open to Copenhagen-based artists.
             </p>
           </div>
           <div className="meta">
