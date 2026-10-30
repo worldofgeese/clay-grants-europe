@@ -2,6 +2,12 @@ name: Build & Push Container
 on:
   push:
     branches: [main]
+  # Rebuild weekly so the image picks up patched node:24-bookworm-slim bases
+  # (for example the October 2026 Node2Shell fix) without a code change.
+  # loving-kypris pulls :latest nightly through podman auto-update.
+  schedule:
+    - cron: "23 3 * * 1"
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
